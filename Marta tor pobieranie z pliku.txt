@@ -1,0 +1,40 @@
+#include iostream
+#include cmath
+#include string
+#include fstream
+using namespace std;
+
+string szyfr(string w, string k){
+    string wynik=;
+    int j=0;
+    for(int i = 0 ; i  w.length();i++){
+        if(w[i]+k[j]-6490){
+            wynik+=(w[i]+k[j]-64-26);
+        }
+        else{
+            wynik+=(w[i]+k[j]-64);
+        }
+        j++;
+        if(j==k.length()){
+            j=0;
+        }
+    }
+    return wynik;
+}
+
+
+int main()
+{
+    ifstream plik(plik.txt);
+    string p;
+    string klucz;
+    while(!plik.eof()) {
+        plik  p;
+        plikklucz;
+        cout  szyfr(p,klucz)endl;
+    }
+    plik.close();
+
+
+    return 0;
+}
